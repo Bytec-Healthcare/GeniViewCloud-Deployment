@@ -1,0 +1,632 @@
+2026-01-29 02:47:59.5221 WARN PID:2804 TID:280 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 02:48:00.4626 WARN PID:2804 TID:280 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 02:48:02.1430 WARN PID:2804 TID:24 SqlServerTimeoutJob: Background job identifier '13919286' was fetched by another worker, will not execute keep alive. 
+2026-01-29 02:48:12.3097 INFO PID:2804 TID:279 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 02:48:12.3358 INFO PID:2804 TID:279 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 11:53:28.5848 WARN PID:2804 TID:188 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 11:53:29.8675 WARN PID:2804 TID:188 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 11:53:40.9948 INFO PID:2804 TID:280 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 11:53:41.3435 INFO PID:2804 TID:284 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 11:53:49.3366 WARN PID:2804 TID:181 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:e21afc93 encountered an exception while sending heartbeat System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 373
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 256
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:afa553f4-3a17-4882-9ec7-c727300e6d54
+Error Number:-1,State:0,Class:20
+2026-01-29 11:53:55.8436 WARN PID:2804 TID:147 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:7a15b557 encountered an exception while sending heartbeat System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 373
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 256
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2026-01-29 11:54:05.6707 ERROR PID:2804 TID:114 WebHost: System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass41_0.<GetResults>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__31_0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at GeniView.Cloud.Controllers.API.LogApiController.WriteBattryLogs(List`1 batteries) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 277
+   at GeniView.Cloud.Controllers.API.LogApiController.ProcessLog(CancellationToken cancellationToken) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 206
+   at GeniView.Cloud.Controllers.API.LogApiController.FinishLog(CancellationToken ct) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 257
+   at GeniView.Cloud.Common.WebHost.Stop(Boolean immediate) in D:\GeniViewCloud\Geni-View Cloud\Common\WebHost.cs:line 50 
+2026-01-29 11:54:05.7593 ERROR PID:2804 TID:180 WebHost: System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass41_0.<GetResults>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__31_0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at GeniView.Cloud.Controllers.API.BaseApiController.GetDefaultAgentID() in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\BaseApiController.cs:line 23
+   at GeniView.Cloud.Controllers.API.LogApiController.WriteBattryLogs(List`1 batteries) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 276
+   at GeniView.Cloud.Controllers.API.LogApiController.ProcessLog(CancellationToken cancellationToken) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 206
+   at GeniView.Cloud.Controllers.API.LogApiController.FinishLog(CancellationToken ct) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 257
+   at GeniView.Cloud.Common.WebHost.Stop(Boolean immediate) in D:\GeniViewCloud\Geni-View Cloud\Common\WebHost.cs:line 50 
+2026-01-29 11:54:06.0429 WARN PID:2804 TID:69 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:ccd191b9 encountered an exception while sending heartbeat System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 373
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 256
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2026-01-29 11:54:07.0573 WARN PID:2804 TID:73 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:b8d325d6 encountered an exception while sending heartbeat System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.SqlServer.SqlServerConnection.<>c__DisplayClass23_0.<Heartbeat>b__0(DbConnection connection) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 509
+   at Hangfire.SqlServer.SqlServerStorage.<>c__DisplayClass39_0.<UseConnection>b__0(DbConnection connection) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 246
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 257
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:12d76597-f9da-4ef6-9b5d-9d3a208c0d2b
+Error Number:-2,State:0,Class:11
+2026-01-29 11:54:07.1493 WARN PID:2804 TID:19 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:361d648d encountered an exception while sending heartbeat System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+The request failed to run because the batch is aborted, this can be caused by abort signal sent from client, or another request is running in the same session, which makes the session busy.
+Operation cancelled by user. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.SqlServer.SqlServerConnection.<>c__DisplayClass23_0.<Heartbeat>b__0(DbConnection connection) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 509
+   at Hangfire.SqlServer.SqlServerStorage.<>c__DisplayClass39_0.<UseConnection>b__0(DbConnection connection) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 246
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 257
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:a95f3514-9839-45a6-ae1e-5f4fe6c7edad
+Error Number:-2,State:0,Class:11
+2026-01-29 11:54:11.4393 ERROR PID:2804 TID:54 WebHost: System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass41_0.<GetResults>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__31_0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at GeniView.Cloud.Controllers.API.LogApiController.ProcessLog(CancellationToken cancellationToken) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 203
+   at GeniView.Cloud.Controllers.API.LogApiController.FinishLog(CancellationToken ct) in D:\GeniViewCloud\Geni-View Cloud\Controllers\API\LogApiController.cs:line 257
+   at GeniView.Cloud.Common.WebHost.Stop(Boolean immediate) in D:\GeniViewCloud\Geni-View Cloud\Common\WebHost.cs:line 50 
+2026-01-29 11:54:13.0844 ERROR PID:2804 TID:140 BackgroundExecution: Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04 System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Operation cancelled by user. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Hangfire.SqlServer.SqlServerDistributedLock.Acquire(DbConnection connection, String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerDistributedLock.cs:line 202
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 737
+   at Hangfire.SqlServer.SqlServerConnection.AcquireDistributedLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 67
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 409
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 140
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundProcessDispatcherBuilder.cs:line 71
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Processing\BackgroundExecution.cs:line 119
+ClientConnectionId:1f629d0a-2ced-42e1-b6a9-603d389f2a59
+Error Number:-2,State:0,Class:11
+2026-01-29 11:54:13.1738 ERROR PID:2804 TID:141 BackgroundExecution: Execution RecurringJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04 System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Operation cancelled by user. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Hangfire.SqlServer.SqlServerDistributedLock.Acquire(DbConnection connection, String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerDistributedLock.cs:line 202
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 737
+   at Hangfire.SqlServer.SqlServerConnection.AcquireDistributedLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 67
+   at Hangfire.Server.RecurringJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 423
+   at Hangfire.Server.RecurringJobScheduler.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 170
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundProcessDispatcherBuilder.cs:line 71
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Processing\BackgroundExecution.cs:line 119
+ClientConnectionId:e69a95b1-7365-41e2-a8df-7c92206e7280
+Error Number:-2,State:0,Class:11
+2026-01-29 11:54:14.2012 WARN PID:2804 TID:264 RecurringJobScheduler: Recurring job 'ProcessLog' can't be scheduled due to an error and will be retried in 00:00:00.1000000. System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2855
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 484
+   at Hangfire.SqlServer.SqlServerConnection.<>c__DisplayClass11_0.<CreateExpiredJob>b__0(DbConnection connection) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 177
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 257
+   at Hangfire.SqlServer.SqlServerConnection.CreateExpiredJob(Job job, IDictionary`2 parameters, DateTime createdAt, TimeSpan expireIn) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 182
+   at Hangfire.Client.CoreBackgroundJobFactory.<>c__DisplayClass15_0.<CreateBackgroundJobTwoSteps>b__0(Int32 _) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 87
+   at Hangfire.Client.CoreBackgroundJobFactory.RetryOnException[T](Int32& attemptsLeft, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 164
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Hangfire.Client.CoreBackgroundJobFactory.RetryOnException[T](Int32& attemptsLeft, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 176
+   at Hangfire.Client.CoreBackgroundJobFactory.CreateBackgroundJobTwoSteps(CreateContext context, Dictionary`2 parameters, DateTime createdAt, TimeSpan expireIn) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 87
+   at Hangfire.Client.CoreBackgroundJobFactory.Create(CreateContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 73
+   at Hangfire.Client.BackgroundJobFactory.<>c__DisplayClass12_0.<CreateWithFilters>b__0() in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 117
+   at Hangfire.Client.BackgroundJobFactory.InvokeClientFilter(IClientFilter filter, CreatingContext preContext, Func`1 continuation) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 160
+   at Hangfire.Client.BackgroundJobFactory.Create(CreateContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 97
+   at Hangfire.RecurringJobExtensions.TriggerRecurringJob(IBackgroundJobFactory factory, JobStorage storage, IStorageConnection connection, IProfiler profiler, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\RecurringJobExtensions.cs:line 121
+   at Hangfire.Server.RecurringJobScheduler.ScheduleRecurringJob(BackgroundProcessContext context, IStorageConnection connection, String recurringJobId, RecurringJobEntity recurringJob, DateTime now) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 333
+ClientConnectionId:4ba187e7-9b05-4c32-a9a5-ea8be57a7d7d
+Error Number:-2,State:0,Class:11
+2026-01-29 11:54:14.3946 INFO PID:2804 TID:100 BackgroundExecution: Execution DelayedJobScheduler recovered from the Faulted state after 00:00:28.0342573 and is in the Running state now 
+2026-01-29 11:54:14.5970 WARN PID:2804 TID:119 SqlServerTimeoutJob: Background job identifier '13919293' was fetched by another worker, will not execute keep alive. 
+2026-01-29 11:54:14.6060 WARN PID:2804 TID:185 SqlServerTimeoutJob: Background job identifier '13919294' was fetched by another worker, will not execute keep alive. 
+2026-01-29 11:54:14.9884 INFO PID:2804 TID:238 ServerWatchdog: 4 servers were removed due to timeout 
+2026-01-29 11:54:15.0600 INFO PID:2804 TID:221 BackgroundExecution: Execution DelayedJobScheduler recovered from the Faulted state after 00:00:07.7875443 and is in the Running state now 
+2026-01-29 11:54:18.6959 INFO PID:2804 TID:130 BackgroundExecution: Execution Worker recovered from the Faulted state after 00:00:17.6034400 and is in the Running state now 
+2026-01-29 11:54:18.6969 INFO PID:2804 TID:263 BackgroundExecution: Execution DelayedJobScheduler recovered from the Faulted state after 00:00:21.9567203 and is in the Running state now 
+2026-01-29 11:54:21.4237 INFO PID:2804 TID:140 BackgroundExecution: Execution DelayedJobScheduler recovered from the Failed state after 00:00:08.1748651 and is in the Running state now 
+2026-01-29 11:54:21.9357 WARN PID:2804 TID:181 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:e21afc93 was considered dead by other servers, restarting... 
+2026-01-29 11:54:21.9357 INFO PID:2804 TID:181 BackgroundServerProcess: Server desktop-hrpt2cu:2804:e21afc93 caught restart signal... 
+2026-01-29 11:54:22.0136 WARN PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:e21afc93 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods. 
+2026-01-29 11:54:22.0716 INFO PID:2804 TID:148 ServerWatchdog: 1 servers were removed due to timeout 
+2026-01-29 11:54:22.7425 INFO PID:2804 TID:39 BackgroundExecution: Execution Worker recovered from the Faulted state after 00:00:16.4608425 and is in the Running state now 
+2026-01-29 11:54:23.0088 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:e21afc93 successfully reported itself as stopped in 854.1912 ms 
+2026-01-29 11:54:23.0088 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:e21afc93 has been stopped in total 1057.9562 ms 
+2026-01-29 11:54:23.2807 INFO PID:2804 TID:173 BackgroundExecution: Execution DelayedJobScheduler recovered from the Faulted state after 00:00:27.0971800 and is in the Running state now 
+2026-01-29 11:54:23.3591 INFO PID:2804 TID:45 BackgroundExecution: Execution DelayedJobScheduler recovered from the Faulted state after 00:00:27.1785155 and is in the Running state now 
+2026-01-29 11:54:24.2075 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 successfully announced in 1173.3314 ms 
+2026-01-29 11:54:24.2267 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 11:54:24.5679 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 all the dispatchers started 
+2026-01-29 11:54:29.5345 WARN PID:2804 TID:147 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:7a15b557 was considered dead by other servers, restarting... 
+2026-01-29 11:54:29.5345 INFO PID:2804 TID:147 BackgroundServerProcess: Server desktop-hrpt2cu:2804:7a15b557 caught restart signal... 
+2026-01-29 11:54:29.6545 WARN PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:7a15b557 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods. 
+2026-01-29 11:54:30.1825 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:7a15b557 successfully reported itself as stopped in 375.1136 ms 
+2026-01-29 11:54:30.1825 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:7a15b557 has been stopped in total 642.3855 ms 
+2026-01-29 11:54:30.3855 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 successfully announced in 203.1526 ms 
+2026-01-29 11:54:30.3995 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 11:54:30.8575 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 all the dispatchers started 
+2026-01-29 11:54:36.1732 INFO PID:2804 TID:141 BackgroundExecution: Execution RecurringJobScheduler recovered from the Failed state after 00:00:22.9236689 and is in the Running state now 
+2026-01-29 11:54:36.1772 INFO PID:2804 TID:180 WebHost: WebHost excute Stop. 
+2026-01-29 11:54:36.1842 WARN PID:2804 TID:180 MQTTHelper: Client dispose 
+2026-01-29 11:54:36.2212 WARN PID:2804 TID:69 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:ccd191b9 was considered dead by other servers, restarting... 
+2026-01-29 11:54:36.2212 INFO PID:2804 TID:69 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ccd191b9 caught restart signal... 
+2026-01-29 11:54:36.2292 WARN PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ccd191b9 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods. 
+2026-01-29 11:54:36.1992 INFO PID:2804 TID:180 LogApiController: Finishlog start. 
+2026-01-29 11:54:36.6094 INFO PID:2804 TID:46 BackgroundExecution: Execution RecurringJobScheduler recovered from the Faulted state after 00:00:43.4914448 and is in the Running state now 
+2026-01-29 11:54:36.7064 INFO PID:2804 TID:101 BackgroundExecution: Execution RecurringJobScheduler recovered from the Faulted state after 00:00:44.0246587 and is in the Running state now 
+2026-01-29 11:54:37.1333 INFO PID:2804 TID:114 WebHost: WebHost excute Stop. 
+2026-01-29 11:54:37.1333 WARN PID:2804 TID:114 MQTTHelper: Client dispose 
+2026-01-29 11:54:37.1333 INFO PID:2804 TID:114 LogApiController: Finishlog start. 
+2026-01-29 11:54:37.1514 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ccd191b9 successfully reported itself as stopped in 891.2271 ms 
+2026-01-29 11:54:37.1514 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ccd191b9 has been stopped in total 928.0192 ms 
+2026-01-29 11:54:37.1944 WARN PID:2804 TID:73 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:b8d325d6 was considered dead by other servers, restarting... 
+2026-01-29 11:54:37.1974 INFO PID:2804 TID:73 BackgroundServerProcess: Server desktop-hrpt2cu:2804:b8d325d6 caught restart signal... 
+2026-01-29 11:54:37.1974 WARN PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:b8d325d6 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods. 
+2026-01-29 11:54:37.2563 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:b8d325d6 successfully reported itself as stopped in 26.2597 ms 
+2026-01-29 11:54:37.2563 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:b8d325d6 has been stopped in total 57.774 ms 
+2026-01-29 11:54:37.3253 WARN PID:2804 TID:19 ServerHeartbeatProcess: Server desktop-hrpt2cu:2804:361d648d was considered dead by other servers, restarting... 
+2026-01-29 11:54:37.3253 INFO PID:2804 TID:19 BackgroundServerProcess: Server desktop-hrpt2cu:2804:361d648d caught restart signal... 
+2026-01-29 11:54:37.3444 WARN PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:361d648d stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods. 
+2026-01-29 11:54:37.3804 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 successfully announced in 221.6384 ms 
+2026-01-29 11:54:37.3984 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 11:54:37.4054 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 successfully announced in 148.8491 ms 
+2026-01-29 11:54:37.4144 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:361d648d successfully reported itself as stopped in 51.1477 ms 
+2026-01-29 11:54:37.4144 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:361d648d has been stopped in total 86.1318 ms 
+2026-01-29 11:54:37.4144 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 11:54:37.4594 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c successfully announced in 43.4447 ms 
+2026-01-29 11:54:37.4724 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 11:54:37.6023 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 all the dispatchers started 
+2026-01-29 11:54:37.6194 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 all the dispatchers started 
+2026-01-29 11:54:37.6913 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c all the dispatchers started 
+2026-01-29 11:54:39.5684 INFO PID:2804 TID:249 BackgroundExecution: Execution Worker recovered from the Faulted state after 00:00:38.4866283 and is in the Running state now 
+2026-01-29 11:54:41.5894 INFO PID:2804 TID:54 WebHost: WebHost excute Stop. 
+2026-01-29 11:54:41.5894 WARN PID:2804 TID:54 MQTTHelper: Client dispose 
+2026-01-29 11:54:41.5894 INFO PID:2804 TID:54 LogApiController: Finishlog start. 
+2026-01-29 11:57:43.7426 ERROR PID:2804 TID:269 DashboardController: GetBatteryEfficiency failed. System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass186_0`1.<ExecuteStoreQueryReliably>b__1()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass186_0`1.<ExecuteStoreQueryReliably>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at GeniView.Cloud.Repository.DashboardDataRepository.GetBatteryEfficiency(Nullable`1 communityID, Nullable`1 groupID, Boolean includeAllSubGroups) in D:\GeniViewCloud\Geni-View Cloud\Repository\DashboardDataRepository.cs:line 652
+   at GeniView.Cloud.Controllers.DashboardController.GetBatteryEfficiency() in D:\GeniViewCloud\Geni-View Cloud\Controllers\DashboardController.cs:line 301
+ClientConnectionId:f4538b73-eb36-4009-9f93-a1bcb14a6679
+Error Number:-2,State:0,Class:11
+2026-01-29 12:05:03.5032 INFO PID:2804 TID: 6 MvcApplication: Geni-View Cloud version 0.9.0.0 has started. 
+2026-01-29 12:05:06.7632 INFO PID:2804 TID: 6 WebHost: WebHost excute RegisterObject. 
+2026-01-29 12:05:06.7632 INFO PID:2804 TID: 6 HangfireBootstrapper: HangfireBootstrapper Start False 
+2026-01-29 12:05:07.0482 INFO PID:2804 TID: 6 SqlServerObjectsInstaller: Start installing Hangfire SQL objects... 
+2026-01-29 12:05:09.6782 INFO PID:2804 TID: 6 SqlServerObjectsInstaller: Hangfire SQL objects installed. 
+2026-01-29 12:05:13.2292 INFO PID:2804 TID: 6 HFScheduler: HFScheduler ClearAndCreateJobs start 
+2026-01-29 12:05:13.2292 INFO PID:2804 TID: 6 HFScheduler: HFScheduler ClearAndCreateJobs Finish 
+2026-01-29 12:05:13.8112 INFO PID:2804 TID: 6 BackgroundJobServer: Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-HRPT2CU\SQLEXPRESS01@GeniViewCloudHangfire' 
+2026-01-29 12:05:13.8112 INFO PID:2804 TID: 6 BackgroundJobServer: Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2026-01-29 12:05:13.8112 INFO PID:2804 TID: 6 BackgroundJobServer: Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:00.1000000 
+2026-01-29 12:05:13.9232 INFO PID:2804 TID:285 MvcApplication: Wait 10 sec satrt mqtt client. 
+2026-01-29 12:05:14.0962 INFO PID:2804 TID:201 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 successfully announced in 171.7488 ms 
+2026-01-29 12:05:14.1192 INFO PID:2804 TID:201 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 12:05:14.2892 INFO PID:2804 TID:201 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 all the dispatchers started 
+2026-01-29 12:05:24.0632 INFO PID:2804 TID:285 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:05:24.2892 WARN PID:2804 TID:183 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:05:24.2892 WARN PID:2804 TID:183 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:05:24.3522 INFO PID:2804 TID:283 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:05:34.3162 INFO PID:2804 TID:226 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:05:34.3312 INFO PID:2804 TID:226 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:05:34.3752 WARN PID:2804 TID:226 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:05:34.3752 WARN PID:2804 TID:226 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:05:44.3852 INFO PID:2804 TID:183 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:05:44.3912 WARN PID:2804 TID:280 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:05:44.3912 WARN PID:2804 TID:280 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:05:44.3852 INFO PID:2804 TID:272 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:05:52.8212 INFO PID:2804 TID:279 WebHost: WebHost excute Stop. 
+2026-01-29 12:05:52.8212 WARN PID:2804 TID:279 MQTTHelper: Client dispose 
+2026-01-29 12:05:52.8512 INFO PID:2804 TID:279 LogApiController: Finishlog start. 
+2026-01-29 12:05:54.4132 INFO PID:2804 TID:280 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:05:54.4202 INFO PID:2804 TID:280 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:05:54.4272 WARN PID:2804 TID:183 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:05:54.4272 WARN PID:2804 TID:183 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:04.4342 INFO PID:2804 TID:43 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:06:04.4342 INFO PID:2804 TID:231 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:06:04.4422 WARN PID:2804 TID:77 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:06:04.4422 WARN PID:2804 TID:77 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:14.4539 INFO PID:2804 TID:75 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:06:14.4589 WARN PID:2804 TID:283 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:06:14.4539 INFO PID:2804 TID:43 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:06:14.4589 WARN PID:2804 TID:283 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:24.5669 INFO PID:2804 TID:77 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:06:24.5779 WARN PID:2804 TID:183 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:06:24.5779 WARN PID:2804 TID:183 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:24.5799 INFO PID:2804 TID:281 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:06:34.5899 INFO PID:2804 TID:283 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:06:34.5939 WARN PID:2804 TID:44 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:06:34.5939 WARN PID:2804 TID:44 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:34.5899 INFO PID:2804 TID:44 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:06:44.6109 INFO PID:2804 TID:280 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:06:44.6149 WARN PID:2804 TID:76 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:06:44.6109 INFO PID:2804 TID:280 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:06:44.6149 WARN PID:2804 TID:76 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:54.6219 INFO PID:2804 TID:76 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:06:54.6339 WARN PID:2804 TID:79 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:06:54.6339 WARN PID:2804 TID:79 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:06:54.6349 INFO PID:2804 TID:42 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:07:04.6559 INFO PID:2804 TID:77 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:07:04.6629 WARN PID:2804 TID:78 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:07:04.6629 WARN PID:2804 TID:78 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:07:04.6559 INFO PID:2804 TID:78 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:07:14.6709 INFO PID:2804 TID:283 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:07:14.6749 WARN PID:2804 TID:286 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:07:14.6749 WARN PID:2804 TID:286 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:07:14.6709 INFO PID:2804 TID:286 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:07:24.6909 INFO PID:2804 TID:79 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:07:24.6969 WARN PID:2804 TID:286 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:07:24.6969 INFO PID:2804 TID:73 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:07:24.6969 WARN PID:2804 TID:286 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:07:34.7297 INFO PID:2804 TID:43 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:07:34.7357 WARN PID:2804 TID:73 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:07:34.7357 WARN PID:2804 TID:73 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:07:34.7297 INFO PID:2804 TID:41 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:07:44.7597 INFO PID:2804 TID:44 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:07:44.7677 WARN PID:2804 TID:74 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:07:44.7677 WARN PID:2804 TID:74 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:07:44.7817 INFO PID:2804 TID:44 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:07:54.7817 INFO PID:2804 TID:286 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:07:54.8017 WARN PID:2804 TID:76 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:07:54.8017 WARN PID:2804 TID:76 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:07:54.8017 INFO PID:2804 TID:76 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:04.8197 INFO PID:2804 TID:74 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:08:04.8247 WARN PID:2804 TID:270 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:08:04.8247 INFO PID:2804 TID:74 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:04.8247 WARN PID:2804 TID:270 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:08:14.8427 INFO PID:2804 TID:78 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:08:14.8467 WARN PID:2804 TID:73 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:08:14.8467 WARN PID:2804 TID:73 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:08:14.8427 INFO PID:2804 TID:73 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:24.8677 INFO PID:2804 TID:75 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:08:24.8677 INFO PID:2804 TID:40 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:24.8717 WARN PID:2804 TID:75 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:08:24.8717 WARN PID:2804 TID:75 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:08:34.8937 INFO PID:2804 TID:74 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:08:34.8987 INFO PID:2804 TID:200 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:34.8997 WARN PID:2804 TID:200 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:08:34.8997 WARN PID:2804 TID:200 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:08:44.9154 INFO PID:2804 TID:270 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:08:44.9264 WARN PID:2804 TID:79 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:08:44.9264 WARN PID:2804 TID:79 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:08:44.9154 INFO PID:2804 TID:79 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:54.9354 INFO PID:2804 TID:272 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:08:54.9404 WARN PID:2804 TID:200 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:08:54.9354 INFO PID:2804 TID:77 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:08:54.9404 WARN PID:2804 TID:200 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:09:03.7174 INFO PID:2804 TID:41 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.7174 INFO PID:2804 TID:41 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 caught stopping signal... 
+2026-01-29 12:09:03.7294 INFO PID:2804 TID:42 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.7234 INFO PID:2804 TID:281 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.7374 INFO PID:2804 TID:269 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.7294 INFO PID:2804 TID:42 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 caught stopping signal... 
+2026-01-29 12:09:03.7454 INFO PID:2804 TID:281 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c caught stopping signal... 
+2026-01-29 12:09:03.7624 INFO PID:2804 TID:269 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 caught stopping signal... 
+2026-01-29 12:09:03.8204 INFO PID:2804 TID:269 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.8784 INFO PID:2804 TID:269 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 caught stopping signal... 
+2026-01-29 12:09:03.9324 INFO PID:2804 TID:269 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.9324 INFO PID:2804 TID:269 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 caught stopping signal... 
+2026-01-29 12:09:03.9654 INFO PID:2804 TID:269 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:09:03.9654 INFO PID:2804 TID:269 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ddb7cf48 caught stopping signal... 
+2026-01-29 12:09:04.2324 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c All dispatchers stopped 
+2026-01-29 12:09:04.2554 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c successfully reported itself as stopped in 21.206 ms 
+2026-01-29 12:09:04.2554 INFO PID:2804 TID:17 BackgroundServerProcess: Server desktop-hrpt2cu:2804:5df1783c has been stopped in total 510.0432 ms 
+2026-01-29 12:09:04.2604 INFO PID:2804 TID:79 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 caught stopped signal... 
+2026-01-29 12:09:04.2624 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 All dispatchers stopped 
+2026-01-29 12:09:04.2984 INFO PID:2804 TID:77 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 caught stopped signal... 
+2026-01-29 12:09:04.2984 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 All dispatchers stopped 
+2026-01-29 12:09:04.2994 INFO PID:2804 TID:283 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 caught stopped signal... 
+2026-01-29 12:09:04.2994 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 successfully reported itself as stopped in 35.9161 ms 
+2026-01-29 12:09:04.2994 INFO PID:2804 TID:62 BackgroundServerProcess: Server desktop-hrpt2cu:2804:d75f7c07 has been stopped in total 513.8871 ms 
+2026-01-29 12:09:04.3194 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 successfully reported itself as stopped in 15.0017 ms 
+2026-01-29 12:09:04.3194 INFO PID:2804 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fbbd9ce9 has been stopped in total 420.0948 ms 
+2026-01-29 12:09:04.3274 INFO PID:2804 TID:201 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 All dispatchers stopped 
+2026-01-29 12:09:04.3494 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 All dispatchers stopped 
+2026-01-29 12:09:04.3744 INFO PID:2804 TID:182 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ddb7cf48 All dispatchers stopped 
+2026-01-29 12:09:04.3974 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 successfully reported itself as stopped in 39.6021 ms 
+2026-01-29 12:09:04.3974 INFO PID:2804 TID:102 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ca29abc8 has been stopped in total 641.3526 ms 
+2026-01-29 12:09:04.4024 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 All dispatchers stopped 
+2026-01-29 12:09:04.4034 INFO PID:2804 TID:201 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 successfully reported itself as stopped in 55.429 ms 
+2026-01-29 12:09:04.4034 INFO PID:2804 TID:201 BackgroundServerProcess: Server desktop-hrpt2cu:2804:cb0c2065 has been stopped in total 633.1892 ms 
+2026-01-29 12:09:04.4154 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 successfully reported itself as stopped in 9.8479 ms 
+2026-01-29 12:09:04.4154 INFO PID:2804 TID:186 BackgroundServerProcess: Server desktop-hrpt2cu:2804:fc502952 has been stopped in total 469.5672 ms 
+2026-01-29 12:09:04.4284 INFO PID:2804 TID:182 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ddb7cf48 successfully reported itself as stopped in 33.053 ms 
+2026-01-29 12:09:04.4284 INFO PID:2804 TID:182 BackgroundServerProcess: Server desktop-hrpt2cu:2804:ddb7cf48 has been stopped in total 437.0054 ms 
+2026-01-29 12:09:04.7354 INFO PID:2804 TID:44 WebHost: WebHost excute Stop. 
+2026-01-29 12:09:04.7354 WARN PID:2804 TID:44 MQTTHelper: Client dispose 
+2026-01-29 12:09:04.7494 INFO PID:2804 TID:44 LogApiController: Finishlog start. 
+2026-01-29 12:09:04.9614 INFO PID:2804 TID:79 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:09:04.9664 WARN PID:2804 TID:283 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:09:04.9664 WARN PID:2804 TID:283 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:09:04.9614 INFO PID:2804 TID:270 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:09:14.9894 INFO PID:2804 TID:79 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:09:14.9944 INFO PID:2804 TID:200 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:09:14.9954 WARN PID:2804 TID:272 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:09:14.9954 WARN PID:2804 TID:272 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:09:25.0334 INFO PID:2804 TID:283 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:09:25.1064 INFO PID:2804 TID:283 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:09:25.1184 WARN PID:2804 TID:283 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:09:25.1184 WARN PID:2804 TID:283 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:09:35.6834 INFO PID:2804 TID:200 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:09:35.6934 WARN PID:2804 TID:200 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:09:35.6934 WARN PID:2804 TID:200 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:09:35.6834 INFO PID:2804 TID:200 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:09:45.7074 INFO PID:2804 TID:270 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:09:45.7144 INFO PID:2804 TID:270 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:09:45.7154 WARN PID:2804 TID:75 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:09:45.7154 WARN PID:2804 TID:75 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:10:00.1891 INFO PID:2804 TID:270 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:10:00.1951 WARN PID:2804 TID:77 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:10:00.1951 WARN PID:2804 TID:77 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:10:00.1891 INFO PID:2804 TID:79 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:10:10.2027 INFO PID:2804 TID:270 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:10:10.2127 WARN PID:2804 TID:200 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:10:10.2127 WARN PID:2804 TID:200 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:10:10.2137 INFO PID:2804 TID:38 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:10:20.2204 INFO PID:2804 TID:79 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:10:20.2284 WARN PID:2804 TID:79 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:10:20.2284 WARN PID:2804 TID:79 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:10:20.2334 INFO PID:2804 TID:79 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:10:30.2334 INFO PID:2804 TID:200 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:10:30.2424 WARN PID:2804 TID:36 MQTTHelper: Client Disconnected MQTT broker 
+2026-01-29 12:10:30.2424 WARN PID:2804 TID:36 MQTTHelper: Client Reconnecting MQTT broker 
+2026-01-29 12:10:30.2424 INFO PID:2804 TID:200 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:24:21.1521 INFO PID:12072 TID: 1 MvcApplication: Geni-View Cloud version 0.9.0.0 has started. 
+2026-01-29 12:24:23.7142 INFO PID:12072 TID: 1 WebHost: WebHost excute RegisterObject. 
+2026-01-29 12:24:23.7562 INFO PID:12072 TID: 1 HangfireBootstrapper: HangfireBootstrapper Start False 
+2026-01-29 12:24:23.9405 INFO PID:12072 TID: 1 SqlServerObjectsInstaller: Start installing Hangfire SQL objects... 
+2026-01-29 12:24:24.4081 INFO PID:12072 TID: 1 SqlServerObjectsInstaller: Hangfire SQL objects installed. 
+2026-01-29 12:24:25.0739 INFO PID:12072 TID: 1 HFScheduler: HFScheduler ClearAndCreateJobs start 
+2026-01-29 12:24:25.0739 INFO PID:12072 TID: 1 HFScheduler: HFScheduler ClearAndCreateJobs Finish 
+2026-01-29 12:24:25.2499 INFO PID:12072 TID: 1 BackgroundJobServer: Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-HRPT2CU\SQLEXPRESS01@GeniViewCloudHangfire' 
+2026-01-29 12:24:25.2499 INFO PID:12072 TID: 1 BackgroundJobServer: Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2026-01-29 12:24:25.2499 INFO PID:12072 TID: 1 BackgroundJobServer: Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:00.1000000 
+2026-01-29 12:24:25.3322 INFO PID:12072 TID:13 MvcApplication: Wait 10 sec satrt mqtt client. 
+2026-01-29 12:24:25.3507 INFO PID:12072 TID: 8 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d successfully announced in 25.6504 ms 
+2026-01-29 12:24:25.3757 INFO PID:12072 TID: 8 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 12:24:25.4667 INFO PID:12072 TID: 8 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d all the dispatchers started 
+2026-01-29 12:24:35.4445 INFO PID:12072 TID:13 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 12:24:35.6625 INFO PID:12072 TID:43 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 12:54:17.4345 INFO PID:12072 TID:71 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 12:54:17.4776 INFO PID:12072 TID:71 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d caught stopping signal... 
+2026-01-29 12:54:17.4776 INFO PID:12072 TID: 8 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d All dispatchers stopped 
+2026-01-29 12:54:17.5599 INFO PID:12072 TID: 8 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d successfully reported itself as stopped in 18.378 ms 
+2026-01-29 12:54:17.5599 INFO PID:12072 TID: 8 BackgroundServerProcess: Server desktop-hrpt2cu:12072:ea14369d has been stopped in total 57.7612 ms 
+2026-01-29 12:54:18.4691 INFO PID:12072 TID:46 WebHost: WebHost excute Stop. 
+2026-01-29 12:54:18.5371 WARN PID:12072 TID:46 MQTTHelper: Client dispose 
+2026-01-29 12:54:18.5531 INFO PID:12072 TID:46 LogApiController: Finishlog start. 
+2026-01-29 13:48:47.5581 INFO PID:3324 TID: 1 MvcApplication: Geni-View Cloud version 0.9.0.0 has started. 
+2026-01-29 13:48:56.0511 INFO PID:3324 TID: 1 WebHost: WebHost excute RegisterObject. 
+2026-01-29 13:48:56.0571 INFO PID:3324 TID: 1 HangfireBootstrapper: HangfireBootstrapper Start False 
+2026-01-29 13:48:58.5539 INFO PID:3324 TID: 1 SqlServerObjectsInstaller: Start installing Hangfire SQL objects... 
+2026-01-29 13:49:04.1330 INFO PID:3324 TID: 1 SqlServerObjectsInstaller: Hangfire SQL objects installed. 
+2026-01-29 13:49:06.1003 INFO PID:3324 TID: 1 HFScheduler: HFScheduler ClearAndCreateJobs start 
+2026-01-29 13:49:06.1003 INFO PID:3324 TID: 1 HFScheduler: HFScheduler ClearAndCreateJobs Finish 
+2026-01-29 13:49:06.2998 INFO PID:3324 TID: 1 BackgroundJobServer: Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-HRPT2CU\SQLEXPRESS01@GeniViewCloudHangfire' 
+2026-01-29 13:49:06.2998 INFO PID:3324 TID: 1 BackgroundJobServer: Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2026-01-29 13:49:06.2998 INFO PID:3324 TID: 1 BackgroundJobServer: Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:00.1000000 
+2026-01-29 13:49:06.3852 INFO PID:3324 TID:11 MvcApplication: Wait 10 sec satrt mqtt client. 
+2026-01-29 13:49:06.4286 INFO PID:3324 TID: 5 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 successfully announced in 53.9029 ms 
+2026-01-29 13:49:06.4502 INFO PID:3324 TID: 5 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 13:49:06.5296 INFO PID:3324 TID: 5 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 all the dispatchers started 
+2026-01-29 13:49:16.6731 INFO PID:3324 TID:11 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 13:49:27.7096 INFO PID:3324 TID:43 MQTTHelper: Client Connected MQTT broker 
+2026-01-29 14:20:38.6482 INFO PID:3324 TID:12 AspNetShutdownDetector: ASP.NET application is shutting down: HostingEnvironment.StopListening. 
+2026-01-29 14:20:38.6853 INFO PID:3324 TID:12 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 caught stopping signal... 
+2026-01-29 14:20:39.3002 INFO PID:3324 TID: 6 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 caught stopped signal... 
+2026-01-29 14:20:39.8802 INFO PID:3324 TID:44 WebHost: WebHost excute Stop. 
+2026-01-29 14:20:40.0043 WARN PID:3324 TID:44 MQTTHelper: Client dispose 
+2026-01-29 14:20:40.3555 INFO PID:3324 TID:44 LogApiController: Finishlog start. 
+2026-01-29 14:20:42.8092 INFO PID:3324 TID: 5 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 All dispatchers stopped 
+2026-01-29 14:20:42.9122 INFO PID:3324 TID: 5 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 successfully reported itself as stopped in 53.3184 ms 
+2026-01-29 14:20:42.9122 INFO PID:3324 TID: 5 BackgroundServerProcess: Server desktop-hrpt2cu:3324:9b4a4124 has been stopped in total 4114.1677 ms 
+2026-01-29 21:31:06.3064 INFO PID:6284 TID: 1 MvcApplication: Geni-View Cloud version 0.9.0.0 has started. 
+2026-01-29 21:31:11.4490 INFO PID:6284 TID: 1 WebHost: WebHost excute RegisterObject. 
+2026-01-29 21:31:11.4920 INFO PID:6284 TID: 1 HangfireBootstrapper: HangfireBootstrapper Start False 
+2026-01-29 21:31:11.9174 INFO PID:6284 TID: 1 SqlServerObjectsInstaller: Start installing Hangfire SQL objects... 
+2026-01-29 21:31:15.2575 INFO PID:6284 TID: 1 SqlServerObjectsInstaller: Hangfire SQL objects installed. 
+2026-01-29 21:31:16.8029 INFO PID:6284 TID: 1 HFScheduler: HFScheduler ClearAndCreateJobs start 
+2026-01-29 21:31:16.8029 INFO PID:6284 TID: 1 HFScheduler: HFScheduler ClearAndCreateJobs Finish 
+2026-01-29 21:31:16.9752 INFO PID:6284 TID: 1 BackgroundJobServer: Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-HRPT2CU\SQLEXPRESS01@GeniViewCloudHangfire' 
+2026-01-29 21:31:16.9752 INFO PID:6284 TID: 1 BackgroundJobServer: Using the following options for SQL Server job storage: Queue poll interval: 00:00:00. 
+2026-01-29 21:31:16.9752 INFO PID:6284 TID: 1 BackgroundJobServer: Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:00.1000000 
+2026-01-29 21:31:17.0580 INFO PID:6284 TID: 8 MvcApplication: Wait 10 sec satrt mqtt client. 
+2026-01-29 21:31:17.1173 INFO PID:6284 TID: 3 BackgroundServerProcess: Server desktop-hrpt2cu:6284:98fd1bb9 successfully announced in 92.1625 ms 
+2026-01-29 21:31:17.1173 INFO PID:6284 TID: 3 BackgroundServerProcess: Server desktop-hrpt2cu:6284:98fd1bb9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler... 
+2026-01-29 21:31:17.1813 INFO PID:6284 TID: 3 BackgroundServerProcess: Server desktop-hrpt2cu:6284:98fd1bb9 all the dispatchers started 
+2026-01-29 21:31:27.1873 INFO PID:6284 TID: 8 MQTTHelper: Client Connecting MQTT broker 
+2026-01-29 21:31:27.4262 INFO PID:6284 TID:40 MQTTHelper: Client Connected MQTT broker 
