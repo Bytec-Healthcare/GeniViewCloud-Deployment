@@ -166,15 +166,22 @@
     window.DashboardWidgets.BatteryStatus = {
         init: function (options) {
             if (!options || !options.url) return;
+            console.log('[BatteryStatus] Initializing...');
 
             load(options.url)
                 .done(function (data) {
+                    console.log('[BatteryStatus] Data loaded');
                     updateBatteryStatus(data);
+                    setTimeout(function() {
+                        $('#batteryStatusWidgetLoader').addClass('hidden');
+                        setTimeout(function() { $('#batteryStatusWidgetLoader').css('display', 'none'); }, 350);
+                    }, 100);
                 })
                 .fail(function (xhr, status, error) {
-                    if (window.console && window.console.error) {
-                        console.error("Failed to load Battery Status:", status, error);
-                    }
+                    console.error('[BatteryStatus] Load failed:', status, error);
+                    setTimeout(function() {
+                        $('#batteryStatusWidgetLoader').addClass('hidden').css('display', 'none');
+                    }, 100);
                     updateBatteryStatus({
                         PowerModulesCount: 0,
                         OnDeviceChargingCount: 0,

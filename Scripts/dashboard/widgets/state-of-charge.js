@@ -55,12 +55,41 @@
     }
 
     function loadStateOfCharge(url) {
+        console.log('[SOC] Loading State of Charge data from:', url);
         $.ajax({
             type: "GET",
             dataType: "json",
             url: url,
             success: function (data) {
+                console.log('[SOC] Data loaded successfully:', data);
                 updateStateOfCharge(data);
+
+                console.log('[SOC] About to hide loader...');
+                // Try direct approach first
+                setTimeout(function() {
+                    var $loader = $('#socWidgetLoader');
+                    console.log('[SOC] Loader element found:', $loader.length);
+
+                    if ($loader.length > 0) {
+                        $loader.addClass('hidden');
+                        console.log('[SOC] Added hidden class');
+
+                        // Also set display none after transition
+                        setTimeout(function() {
+                            $loader.css('display', 'none');
+                            console.log('[SOC] Set display none');
+                        }, 350);
+                    } else {
+                        console.error('[SOC] Loader element not found!');
+                    }
+                }, 100);
+            },
+            error: function(xhr, status, error) {
+                console.error('[SOC] Load failed:', status, error);
+                // Hide loader even on error
+                setTimeout(function() {
+                    $('#socWidgetLoader').addClass('hidden').css('display', 'none');
+                }, 100);
             }
         });
     }

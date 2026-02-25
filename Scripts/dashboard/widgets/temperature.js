@@ -48,17 +48,24 @@
     }
 
     function loadTemperature(url) {
+        console.log('[Temperature] Loading data...');
         $.ajax({
             type: "GET",
             dataType: "json",
             url: url,
             success: function (data) {
+                console.log('[Temperature] Data loaded');
                 updateTemperature(data);
+                setTimeout(function() {
+                    $('#temperatureWidgetLoader').addClass('hidden');
+                    setTimeout(function() { $('#temperatureWidgetLoader').css('display', 'none'); }, 350);
+                }, 100);
             },
             error: function (xhr, status, error) {
-                if (window.console && window.console.error) {
-                    console.error("Failed to load Temperature:", status, error);
-                }
+                console.error('[Temperature] Load failed:', status, error);
+                setTimeout(function() {
+                    $('#temperatureWidgetLoader').addClass('hidden').css('display', 'none');
+                }, 100);
             }
         });
     }

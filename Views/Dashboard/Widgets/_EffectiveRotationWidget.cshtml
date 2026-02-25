@@ -4,6 +4,11 @@
 *@
 
 <div class="effective-rotation" id="effectiveRotationWidget" aria-label="Effective Rotation">
+    <!-- Widget Loader -->
+    <div class="widget-loader" id="effectiveRotationWidgetLoader">
+        <img src="@Url.Content("~/Resources/loader.svg")" alt="Loading..." />
+    </div>
+
     <div class="effective-rotation__header">
         <div class="effective-rotation__header-left">
             <div class="effective-rotation__title-row">
@@ -35,7 +40,7 @@
 
     <div class="effective-rotation__cards">
 
-        <div class="effective-rotation__card">
+        <div class="effective-rotation__card" data-card-key="good">
             <div class="effective-rotation__card-icon effective-rotation__card-icon--good" aria-hidden="true">
                 <img src="@Url.Content("~/Content/Img/widgets/HighsoC.svg")"
                      class="soc-svg-icon"
@@ -45,7 +50,7 @@
             <div class="effective-rotation__card-label">Good</div>
         </div>
 
-        <div class="effective-rotation__card">
+        <div class="effective-rotation__card" data-card-key="average">
             <div class="effective-rotation__card-icon effective-rotation__card-icon--avg" aria-hidden="true">
                 <img src="@Url.Content("~/Content/Img/widgets/LowsoC.svg")"
                      class="soc-svg-icon"
@@ -55,7 +60,7 @@
             <div class="effective-rotation__card-label">Average</div>
         </div>
 
-        <div class="effective-rotation__card">
+        <div class="effective-rotation__card" data-card-key="poor">
             <div class="effective-rotation__card-icon effective-rotation__card-icon--poor" aria-hidden="true">
                 <img src="@Url.Content("~/Content/Img/widgets/ChargeNow.svg")"
                      class="soc-svg-icon"

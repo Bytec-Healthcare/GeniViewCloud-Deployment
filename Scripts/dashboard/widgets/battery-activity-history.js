@@ -182,12 +182,24 @@
                 canvas.parentElement.style.height = "220px";
             }
 
+            console.log('[BatteryActivity] Initializing...');
             load(options.url).done(function (model) {
+                console.log('[BatteryActivity] Data loaded');
                 var chartData = buildChartData(model);
                 var yAxis = calcYAxis(chartData);
 
                 chart = destroyChart(chart);
                 chart = renderChart(canvas, chartData, yAxis);
+
+                setTimeout(function() {
+                    $('#batteryActivityHistoryWidgetLoader').addClass('hidden');
+                    setTimeout(function() { $('#batteryActivityHistoryWidgetLoader').css('display', 'none'); }, 350);
+                }, 100);
+            }).fail(function() {
+                console.error('[BatteryActivity] Load failed');
+                setTimeout(function() {
+                    $('#batteryActivityHistoryWidgetLoader').addClass('hidden').css('display', 'none');
+                }, 100);
             });
         }
 

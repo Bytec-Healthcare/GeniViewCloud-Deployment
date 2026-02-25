@@ -173,12 +173,24 @@
                 canvas.parentElement.style.height = "220px";
             }
 
+            console.log('[DeviceActivity] Initializing...');
             load(options.url).done(function (model) {
+                console.log('[DeviceActivity] Data loaded');
                 var chartData = buildChartData(model);
                 var yAxis = calcYAxis(chartData);
 
                 chart = destroyChart(chart);
                 chart = renderChart(canvas, chartData, yAxis);
+
+                setTimeout(function() {
+                    $('#deviceActivityHistoryWidgetLoader').addClass('hidden');
+                    setTimeout(function() { $('#deviceActivityHistoryWidgetLoader').css('display', 'none'); }, 350);
+                }, 100);
+            }).fail(function() {
+                console.error('[DeviceActivity] Load failed');
+                setTimeout(function() {
+                    $('#deviceActivityHistoryWidgetLoader').addClass('hidden').css('display', 'none');
+                }, 100);
             });
         }
 
