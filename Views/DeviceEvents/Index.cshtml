@@ -277,32 +277,6 @@
         body:not(.admin-area) #wrapper.toggled.sidebar-expanded #DeviceEventHistory .dataTables_wrapper {
             width: 100% !important;
         }
-
-        /* Page Loader */
-        .page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-        }
-
-        .page-loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        .page-loader img {
-            width: 160px;
-            height: auto;
-        }
     </style>
 }
 
@@ -349,10 +323,8 @@
             $.get('@Url.Action("GetDeviceEventHistory", "DeviceEvents")', function (html) {
                 $('#DeviceEventHistory').html(html);
 
-                // Hide page loader when data loads
-                setTimeout(function() {
-                    $('#deviceEventsPageLoader').addClass('hidden');
-                }, 300);
+                // Hide loader after content is loaded
+                $('#deviceEventsContainer .loader-overlay').fadeOut(300);
 
                 window.setTimeout(function () {
                     tryAdjustDeviceEventsDataTable();
@@ -381,11 +353,6 @@
     </script>
 }
 
-<!-- Page Loader -->
-<div class="page-loader" id="deviceEventsPageLoader">
-    <img src="@Url.Content("~/Resources/loader.svg")" alt="Loading..." />
-</div>
-
 <div class="device-events-bar">
     <div class="device-events-title">
         Device Events <span>(Latest 50)</span>
@@ -402,7 +369,10 @@
 
 <div style="height:12px"></div>
 
-<div class="device-events-card">
+<div class="device-events-card table-loading" id="deviceEventsContainer">
+    <div class="loader-overlay">
+        <img src="@Url.Content("~/Content/Img/loader.svg")" alt="Loading..." class="loader-svg" />
+    </div>
     <div class="device-events-tablewrap">
         <div id="DeviceEventHistory"></div>
     </div>

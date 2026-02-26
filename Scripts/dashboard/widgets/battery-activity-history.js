@@ -166,41 +166,39 @@
 
         function init(options) {
             if (!options || !options.url) return;
+            var $widget = $("#batteryActivityHistoryWidget");
 
             if (!window.Chart) {
                 if (window.console && window.console.error) {
                     console.error("Chart.js not loaded. BatteryActivityHistory widget skipped.");
                 }
+                $widget.find('.loader-overlay').fadeOut(300);
                 return;
             }
 
             var canvas = document.getElementById("batteryActivityHistoryCanvas");
-            if (!canvas) return;
+            if (!canvas) {
+                $widget.find('.loader-overlay').fadeOut(300);
+                return;
+            }
 
             // Ensure we have a consistent height like the UX card.
             if (canvas.parentElement) {
                 canvas.parentElement.style.height = "220px";
             }
 
-            console.log('[BatteryActivity] Initializing...');
-            load(options.url).done(function (model) {
-                console.log('[BatteryActivity] Data loaded');
-                var chartData = buildChartData(model);
-                var yAxis = calcYAxis(chartData);
+            load(options.url)
+                .done(function (model) {
+                    var chartData = buildChartData(model);
+                    var yAxis = calcYAxis(chartData);
 
-                chart = destroyChart(chart);
-                chart = renderChart(canvas, chartData, yAxis);
-
-                setTimeout(function() {
-                    $('#batteryActivityHistoryWidgetLoader').addClass('hidden');
-                    setTimeout(function() { $('#batteryActivityHistoryWidgetLoader').css('display', 'none'); }, 350);
-                }, 100);
-            }).fail(function() {
-                console.error('[BatteryActivity] Load failed');
-                setTimeout(function() {
-                    $('#batteryActivityHistoryWidgetLoader').addClass('hidden').css('display', 'none');
-                }, 100);
-            });
+                    chart = destroyChart(chart);
+                    chart = renderChart(canvas, chartData, yAxis);
+                    $widget.find('.loader-overlay').fadeOut(300);
+                })
+                .fail(function() {
+                    $widget.find('.loader-overlay').fadeOut(300);
+                });
         }
 
         return {

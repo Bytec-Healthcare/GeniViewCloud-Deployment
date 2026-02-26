@@ -158,40 +158,38 @@
 
         function init(options) {
             if (!options || !options.url) return;
+            var $widget = $("#deviceActivityHistoryWidget");
 
             if (!window.Chart) {
                 if (window.console && window.console.error) {
                     console.error("Chart.js not loaded. DeviceActivityHistory widget skipped.");
                 }
+                $widget.find('.loader-overlay').fadeOut(300);
                 return;
             }
 
             var canvas = document.getElementById("deviceActivityHistoryCanvas");
-            if (!canvas) return;
+            if (!canvas) {
+                $widget.find('.loader-overlay').fadeOut(300);
+                return;
+            }
 
             if (canvas.parentElement) {
                 canvas.parentElement.style.height = "220px";
             }
 
-            console.log('[DeviceActivity] Initializing...');
-            load(options.url).done(function (model) {
-                console.log('[DeviceActivity] Data loaded');
-                var chartData = buildChartData(model);
-                var yAxis = calcYAxis(chartData);
+            load(options.url)
+                .done(function (model) {
+                    var chartData = buildChartData(model);
+                    var yAxis = calcYAxis(chartData);
 
-                chart = destroyChart(chart);
-                chart = renderChart(canvas, chartData, yAxis);
-
-                setTimeout(function() {
-                    $('#deviceActivityHistoryWidgetLoader').addClass('hidden');
-                    setTimeout(function() { $('#deviceActivityHistoryWidgetLoader').css('display', 'none'); }, 350);
-                }, 100);
-            }).fail(function() {
-                console.error('[DeviceActivity] Load failed');
-                setTimeout(function() {
-                    $('#deviceActivityHistoryWidgetLoader').addClass('hidden').css('display', 'none');
-                }, 100);
-            });
+                    chart = destroyChart(chart);
+                    chart = renderChart(canvas, chartData, yAxis);
+                    $widget.find('.loader-overlay').fadeOut(300);
+                })
+                .fail(function() {
+                    $widget.find('.loader-overlay').fadeOut(300);
+                });
         }
 
         return { init: init };

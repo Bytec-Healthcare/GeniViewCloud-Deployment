@@ -55,24 +55,17 @@
     }
 
     function loadCycleStatus(url) {
-        console.log('[Cycle] Loading data...');
+        var $widget = $("#cycleStatusWidget");
         $.ajax({
             type: "GET",
             dataType: "json",
             url: url,
             success: function (data) {
-                console.log('[Cycle] Data loaded');
                 updateCycleStatus(data);
-                setTimeout(function() {
-                    $('#cycleWidgetLoader').addClass('hidden');
-                    setTimeout(function() { $('#cycleWidgetLoader').css('display', 'none'); }, 350);
-                }, 100);
+                $widget.find('.loader-overlay').fadeOut(300);
             },
-            error: function(xhr, status, error) {
-                console.error('[Cycle] Load failed:', status);
-                setTimeout(function() {
-                    $('#cycleWidgetLoader').addClass('hidden').css('display', 'none');
-                }, 100);
+            error: function() {
+                $widget.find('.loader-overlay').fadeOut(300);
             }
         });
     }

@@ -31,8 +31,9 @@
     }
 
     function showLoading() {
+        $("#popupLoader").show();
         var $tb = $("#gvPopupTbody").empty();
-        $tb.append("<tr><td colspan='10' style='text-align:center;'>Loading...</td></tr>");
+        $tb.append("<tr><td colspan='10' style='text-align:center;'>&nbsp;</td></tr>");
 
         $("#gvPopupPager").empty();
         $("#gvPopupInfo").text("");
@@ -230,8 +231,6 @@
         var requestId = ++activeRequestId;
 
         showLoading();
-        // Show popup loader
-        $('#dashboardPopupLoader').removeClass('hidden');
 
         $.ajax({
             type: "GET",
@@ -246,15 +245,12 @@
         }).done(function (resp) {
             if (requestId !== activeRequestId) return;
 
+            $("#popupLoader").fadeOut(200);
+
             var items = resp && resp.Items ? resp.Items : [];
             renderRows(items);
             renderPager(resp.Total || 0, resp.PageNumber || 1, resp.PageSize || state.pageSize);
             setHeader(resp.PowerModulesCount || 0);
-
-            // Hide popup loader
-            setTimeout(function() {
-                $('#dashboardPopupLoader').addClass('hidden');
-            }, 300);
         }).fail(function (xhr, status, err) {
             if (requestId !== activeRequestId) return;
 
@@ -266,11 +262,6 @@
             renderRows([]);
             renderPager(0, state.pageNumber, state.pageSize);
             setHeader(0);
-
-            // Hide popup loader even on error
-            setTimeout(function() {
-                $('#dashboardPopupLoader').addClass('hidden');
-            }, 300);
         });
     }
 

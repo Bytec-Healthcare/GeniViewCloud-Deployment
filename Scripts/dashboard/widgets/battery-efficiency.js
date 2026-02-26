@@ -53,24 +53,20 @@
     }
 
     function loadBatteryEfficiency(url) {
-        console.log('[BatteryEff] Loading data...');
+        var $widget = $("#batteryEfficiencyWidget");
         $.ajax({
             type: "GET",
             dataType: "json",
             url: url,
             success: function (data) {
-                console.log('[BatteryEff] Data loaded');
                 updateBatteryEfficiency(data);
-                setTimeout(function() {
-                    $('#batteryEfficiencyWidgetLoader').addClass('hidden');
-                    setTimeout(function() { $('#batteryEfficiencyWidgetLoader').css('display', 'none'); }, 350);
-                }, 100);
+                $widget.find('.loader-overlay').fadeOut(300);
             },
             error: function (xhr, status, error) {
-                console.error('[BatteryEff] Load failed:', status, error);
-                setTimeout(function() {
-                    $('#batteryEfficiencyWidgetLoader').addClass('hidden').css('display', 'none');
-                }, 100);
+                if (window.console && window.console.error) {
+                    console.error("Failed to load Battery Efficiency:", status, error);
+                }
+                $widget.find('.loader-overlay').fadeOut(300);
             }
         });
     }

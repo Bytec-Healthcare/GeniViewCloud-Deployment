@@ -61,24 +61,19 @@
     }
 
     function loadEffectiveRotation(url) {
-        console.log('[Rotation] Loading data...');
+        var $widget = $("#effectiveRotationWidget");
         $.ajax({
             type: "GET",
             dataType: "json",
             url: url,
             success: function (data) {
-                console.log("[Rotation] Data loaded:", data);
+                console.log("Raw AJAX response:", data);
                 updateEffectiveRotation(data);
-                setTimeout(function() {
-                    $('#effectiveRotationWidgetLoader').addClass('hidden');
-                    setTimeout(function() { $('#effectiveRotationWidgetLoader').css('display', 'none'); }, 350);
-                }, 100);
+                $widget.find('.loader-overlay').fadeOut(300);
             },
             error: function(xhr, status, error) {
-                console.error("[Rotation] Load failed:", status, error);
-                setTimeout(function() {
-                    $('#effectiveRotationWidgetLoader').addClass('hidden').css('display', 'none');
-                }, 100);
+                console.error("Failed to load Effective Rotation:", status, error);
+                $widget.find('.loader-overlay').fadeOut(300);
             }
         });
     }
